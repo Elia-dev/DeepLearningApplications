@@ -107,6 +107,14 @@ class ResidualMLP(nn.Module):
 ![Validation and Test Accuracy vs Depth (MLP vs ResidualMLP)](assets/lab1_ex1.2_mlp_vs_residual_depth_accuracy.png)
 
 As depth increases, the plain MLP's accuracy degrades — the deepest configurations perform *worse* than shallower ones — while the ResidualMLP's accuracy stays essentially flat and high across the entire depth range. This is the core ResNet claim, reproduced directly: adding capacity without skip connections does not translate into better optimization, and can actively hurt it, whereas residual connections make depth close to "free."
+
+<div style="display: flex; gap: 20px;">
+    <img src="./assets/residualsVSnonResiduals.svg" width="49%">
+    <img src="./assets/valResidualsVSnonResiduals.svg" width="49%">
+</div>
+
+### Extra - Gradient Analysis
+
 <details>
 <summary>Snippet gradient analysis</summary>
 
@@ -127,13 +135,6 @@ def grad_norms_per_layer(model, x, y):
 ```
 
 </details> 
-
-<br />
-
-<div style="display: flex; gap: 20px;">
-    <img src="./assets/residualsVSnonResiduals.svg" width="49%">
-    <img src="./assets/valResidualsVSnonResiduals.svg" width="49%">
-</div>
 
 ![Per-Layer Gradient Norms at Initialization (Plain vs Residual, Depth=16)](assets/lab1_ex1.2_gradient_norms_per_layer.png)
 
