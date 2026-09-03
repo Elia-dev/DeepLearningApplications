@@ -1,0 +1,28 @@
+# Computing
+numpy>=1.21.0
+torch>=2.0.0
+matplotlib>=3.4.0
+torchvision>=0.15.0
+Pillow>=9.0.0
+
+# Transformers
+transformers>=4.30.0
+datasets>=2.10.0
+tokenizers>=0.13.0
+
+# Reinforcement Learning
+gymnasium>=0.27.0
+
+# Machine Learning utilities
+scikit-learn>=1.0.0
+tqdm>=4.62.0
+
+# Tracking & logging
+wandb>=0.15.0
+
+# Image captioning (BLIP model)
+# Already included in transformers, but verify:
+# - Salesforce/blip-image-captioning-base (loaded via transformers)
+
+# Optional: GPU acceleration (uncomment if needed)
+# torch-cuda  # or install CUDA separately
